@@ -10,7 +10,7 @@
                     <input formControlName="email" type="mail" id="email" placeholder="Correo">
                     <div class="text-danger"
                         *ngIf="(userForm.get('email')?.invalid || userForm.get('email')?.hasError('required')) && userForm.get('email')?.touched">
-                        <span>El correo tener formato de <strong>Correo</strong></span>
+                        <span>El correo debe tener formato de <strong>Correo</strong></span>
                     </div>
                 </div>
 
