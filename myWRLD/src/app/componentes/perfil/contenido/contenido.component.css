@@ -1,0 +1,165 @@
+.cont {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    background-color: #f2e8c2;
+}
+
+.cont:hover {
+    background-color: #eee0a8;
+}
+
+.cont:hover textarea {
+    background-color: #eee0a8;
+}
+
+.contText {
+    display: flex;
+}
+
+/* sectionA */
+.sectionContA {
+    width: 17%;
+    position: relative;
+}
+
+.sectionContA img {
+    position: absolute;
+    top: 30px;
+    left: 4vw;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-color: 1px solid black;
+    cursor: pointer;
+}
+
+/* sectionB */
+.sectionB {
+    width: 70%;
+    cursor: default;
+}
+
+.sectionB div:first-child {
+    margin-top: 30px;
+}
+
+.nombre {
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.username {
+    margin-right: 10px;
+}
+
+.descripcion textarea {
+    width: 100%;
+    background-color: #f2e8c2;
+    border: none;
+    resize: none;
+    outline: none;
+    box-shadow: none;
+    cursor: default;
+}
+
+.addComment {
+    position: relative;
+    margin-top: -25px;
+}
+
+.addComment input {
+    background-color: #faf3d7;
+    border: 1px solid black;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.addComment button {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: none !important;
+}
+
+/* sectionC */
+
+.sectionC {
+    position: relative;
+    margin-top: 40px;
+}
+
+.iconComments {
+    position: absolute;
+    left: 10%;
+    bottom: 5px;
+    color: rgb(100, 100, 100);
+    cursor: pointer;
+}
+
+.iconStar {
+    position: absolute;
+    left: 49%;
+    bottom: 5px;
+    color: rgb(252, 89, 116);
+    cursor: pointer;
+}
+
+.iconTrash {
+    position: absolute;
+    left: 90%;
+    bottom: 5px;
+    color: rgb(175, 0, 0);
+    cursor: pointer;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .sectionContA {
+        width: 22%;
+    }
+    
+    .sectionB{
+        width: 65%;
+    }
+    
+    .date {
+        display: none;
+    }
+}
+
+@media (max-width: 300px) {
+    .sectionContA {
+        width: 28%;
+    }
+    
+    .sectionB{
+        width: 60%;
+    }
+    
+    .username {
+        display: none;
+    }
+}

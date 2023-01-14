@@ -1,0 +1,33 @@
+<div class="profileInfo">
+    <div class="sectionA">
+        <img src="{{imgInfo}}" alt="profilePic"><br>
+        <span routerLink="/followers/{{username}}">{{followers.length}} seguidores</span><br>
+        <span routerLink="/following/{{username}}">{{following.length}} seguidos</span>
+    </div>
+    <div class="sectionB">
+        <div>
+            <span class="nombre">{{name}}</span><br>
+            <span>@{{username}}</span>
+        </div>
+        <div class="descripcion">
+            <textarea readonly>{{desc}}</textarea>
+        </div>
+    </div>
+    <div class="sectionC">
+        <ng-template *ngIf="username == myUsername; then edit else follow"></ng-template>
+        <ng-template #edit>
+            <button class="btn btn-primary" routerLink="/edit/{{username}}">Editar Perfil</button>
+        </ng-template>
+        <ng-template #follow>
+            <ng-template *ngIf="askFollowing == false; then yes else no"></ng-template>
+
+            <ng-template #yes>
+                <button id="followButton" class="btn btn-primary" (click)="newFollow()">Seguir</button>
+            </ng-template>
+            <ng-template #no>
+                <button id="followButton" class="btn btn-success" (click)="deleteFollow()">Siguiendo</button>
+            </ng-template>        
+        </ng-template>
+        
+    </div>
+</div>

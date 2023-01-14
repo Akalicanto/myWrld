@@ -1,0 +1,14 @@
+<div class="listCont">
+    <div class="side"></div>
+    <div id="list" class="list">
+        <app-buscador></app-buscador>
+        <div class="respuesta">
+            Respuestas al mensaje de @{{res}}:
+        </div>        
+        <ng-container *ngFor="let post of dataPost">
+            <app-contenido [date]="post.creationDate" [ILIKEIT]="post.myLikeIsHere" [likes]="post.likes.length" [email]="post.email" [sonNumber]="post.sonNumber" [id]="post._id" [name]="post.name" [username]="post.username" [msg]="post.msg"
+            [imgCont]="post.profilePath"></app-contenido>
+        </ng-container>
+    </div>
+    <div class="side"></div>
+</div>

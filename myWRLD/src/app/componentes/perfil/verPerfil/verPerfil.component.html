@@ -1,0 +1,43 @@
+<div class="profileCont">
+    <div class="side"></div>
+    <div id="profile" class="profile">
+        <app-buscador></app-buscador>
+        <app-portada [imgPortada]="headerPic"></app-portada>
+        <app-info [askFollowing]="askFollowing" [followers]="followers" [following]="following" [id]="id" [desc]="desc" [name]="name" [username]="username" [imgInfo]="profilePic"></app-info>
+
+        <ng-template *ngIf="username == myUsername; then create"></ng-template>
+
+        <ng-template #create>
+            <app-agregarpost></app-agregarpost>
+        </ng-template>
+
+        <ng-template *ngIf="dataPost.length > 0; then post else start"></ng-template>
+
+        <ng-template #post>
+            <ng-container *ngFor="let post of dataPost">
+                <app-contenido [date]="post.creationDate" [ILIKEIT]="post.myLikeIsHere" [likes]="post.likes.length" [email]="post.email" [sonNumber]="post.sonNumber" [id]="post._id" [name]="name" [username]="username" [msg]="post.msg"
+                    [imgCont]="profilePic"></app-contenido>
+            </ng-container>
+        </ng-template>
+
+
+        <ng-template #start>
+            <ng-template *ngIf="username == myUsername; then yes else no"></ng-template>
+            <ng-template #yes>
+                <div class="start">
+                    <span>Aquí comienza tu historia...</span>
+                </div>
+            </ng-template>
+
+            <ng-template #no>
+                <div class="start">
+                    <span>Aun no ha comenzado su historia...</span>
+                </div>
+            </ng-template>
+        </ng-template>
+
+
+
+    </div>
+    <div class="side"></div>
+</div>

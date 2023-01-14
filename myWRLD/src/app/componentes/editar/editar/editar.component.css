@@ -1,0 +1,292 @@
+.editCont {
+    position: fixed;
+    display: flex;
+    top: 51px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.side {
+    width: 40%;
+    height: 100%;
+}
+
+.edit {
+    width: 100%;
+    height: 100%;
+    background-color: #f2e8c2;
+}
+
+.format {
+    position: relative;
+    display: flex;
+    height: 30vh;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    padding-bottom: 40px;
+    background-color: #f2e8c2;
+}
+
+input{
+    background-color: #faf3d7;
+    border: 1px solid black;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 250px;
+}
+
+/* Portada */
+.portadaImg {
+    height: 225px;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+.file {
+    display: none;
+}
+
+.part-A {
+    position: relative;
+}
+
+.editPortada {
+    position: absolute;
+    bottom: 24px;
+    right: -1px;
+    width: 50px;
+    height: 50px;
+    background-color: lightgrey;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.editPortada:hover {
+    background-color: grey;
+}
+
+/* sectionA */
+.sectionA {
+    position: relative;
+    width: 30%;
+}
+
+.sectionA img {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    border-radius: 50%;
+    width: 115px;
+    height: 115px;
+    border-color: 1px solid black;
+    cursor: pointer;
+}
+
+.editPerfil {
+    position: absolute;
+    top: 60px;
+    left: -1px;
+    width: 50px;
+    height: 50px;
+    background-color: lightgrey;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 2rem;
+
+    cursor: pointer;
+}
+
+.editPerfil:hover {
+    background-color: grey;
+}
+
+/* sectionB */
+.sectionB {
+    width: 100%;
+    margin-left: 5%;
+}
+
+.sectionB div:first-child {
+    padding-top: 50px;
+}
+
+textarea {
+    height: 100px;
+    width: 80%;
+    padding: 0 15px;
+    background-color: #faf3d7;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+    resize: none;
+}
+
+/* sectionC */
+.sectionC {
+    position: relative;
+    width: 10%;
+}
+
+.sectionC button {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+/*Formularios de cambio*/
+.formChange {
+    text-align: center;
+    display: flex;
+    padding-top: 20px;
+    background-color: #f2e8c2;
+    border: 1px solid black;
+}
+
+.formChange input {
+    background-color: #faf3d7;
+    border: 1px solid black;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 250px;
+    margin-bottom: 40px;
+}
+
+.redtext{
+    color: red;
+}
+
+.text-danger {
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+
+.passwordiv {
+    position: relative;
+}
+
+.eyeicon {
+    position: relative;
+    top: 0;
+    right: 25px;
+}
+
+.formA {
+    width: 50%;
+}
+
+.formB {
+    width: 50%;
+}
+
+.btnDanger {
+    background-color: #f2e8c2;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .side {
+        width: 20%;
+    }
+
+    .sectionB {
+        width: 100%;
+        margin-left: 10%;
+    }
+
+    .format {
+        height: 250px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .side {
+        width: 10%;
+    }
+
+    .format {
+        height: 250px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .side {
+        display: none;
+    }
+
+    .sectionB {
+        width: 100%;
+        margin-left: 12%;
+    }
+
+    .formChange {
+        display: block;
+    }
+    
+    .formA {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+    
+    .formB {
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .at {
+        margin-left: -20px;
+    }
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .format {
+        display: block;
+        height: 300px;
+    }
+
+    .sectionA {
+        top: -40px;
+        width: 100%;
+        height: 50%;
+    }
+
+    .sectionB {
+        position: absolute;
+        top: 70px;
+        width: 100%;
+    }
+
+    .sectionC {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+    }
+
+    .sectionB input {
+        width: 50%;
+    }
+
+    .formChange input {
+        width: 200px;
+    }
+}

@@ -1,0 +1,11 @@
+<div class="principalCont">
+    <div class="side"></div>
+    <div class="principal">
+        <app-buscador></app-buscador>
+        <app-agregarpost></app-agregarpost>
+        <ng-container *ngFor="let post of dataPost">
+            <app-contenido [date]="post.creationDate" [ILIKEIT]="post.myLikeIsHere" [likes]="post.likes.length" [email]="post.email" [sonNumber]="post.sonNumber" [id]="post._id" [name]="post.name" [username]="post.username" [msg]="post.msg" [imgCont]="post.profilePath"></app-contenido>
+        </ng-container>
+    </div>
+    <div class="side"></div>
+</div>

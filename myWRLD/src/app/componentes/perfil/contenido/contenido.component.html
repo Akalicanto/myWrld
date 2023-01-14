@@ -1,0 +1,48 @@
+<div class="cont">
+    <div class="contText">
+        <div class="sectionContA">
+            <img src="{{imgCont}}" alt="profilePic" routerLink='/perfil/{{username}}'><br>
+        </div>
+        <div class="sectionB">
+            <div>
+                <span class="nombre">{{name}}</span>
+                <span class="username">@{{username}}</span>
+                <span class="date">{{date}}</span>
+            </div>
+            <div class="descripcion">
+                <textarea id="descripcion" readonly>{{msg}}</textarea>
+            </div>
+            <div class="addComment">
+                <form [formGroup]="comentarForm" (ngSubmit)="comentar()">
+                    <input formControlName="comentario" type="text" placeholder="Añade un comentario!" maxlength="160">
+                    <div class="text-danger"
+                        *ngIf="comentarForm.get('comentario')?.hasError('required') && comentarForm.get('comentario')?.touched">
+                        <span>Debes añadir un <strong>Comentario</strong> para publicarlo</span>
+                    </div>
+                    <button type="submit" [disabled]="comentarForm.invalid">
+                        <fa-icon [icon]="faArrowRight"></fa-icon>
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="sectionC">
+        <ng-container *ngIf="sonNumber >= 1">
+            <div class="iconComments">
+                <fa-icon [icon]="faComment" (click)="send()"></fa-icon> {{sonNumber}}
+            </div>
+        </ng-container>
+        <div class="iconStar">
+            <fa-icon [icon]="faStar" (click)="favPost()"></fa-icon> {{likes}}
+        </div>
+        <ng-template *ngIf="username == myUsername; then delete"></ng-template>
+        <ng-template #delete>
+            <div class="iconTrash">
+                <fa-icon (click)="borrarPublicacion()" [icon]="faTrash"></fa-icon>
+            </div>
+        </ng-template>
+
+    </div>
+</div>

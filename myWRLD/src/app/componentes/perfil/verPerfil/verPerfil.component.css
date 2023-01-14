@@ -1,0 +1,120 @@
+.profileCont {
+    position: fixed;
+    display: flex;
+    top: 51px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.side {
+    width: 40%;
+}
+
+.profile {
+    width: 100%;
+}
+
+.start {
+    position: relative;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color: #f2e8c2;
+    height: 46vh;
+}
+
+.start span {
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.nothing {
+    position: relative;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color: #f2e8c2;
+    height: 46vh;
+}
+
+.nothing span {
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (max-width: 1500px) {
+    .nothing span {
+        left: 150px;
+    }
+
+    .start span {
+        left: 150px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .side {
+        width: 20%;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .side {
+        width: 10%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .side {
+        display: none;
+    }
+
+    .nothing span {
+        left: 125px;
+    }
+
+    .start span {
+        left: 125px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .nothing span {
+        left: 100px;
+    }
+
+    .start span {
+        left: 100px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nothing span {
+        left: 80px;
+    }
+
+    .start span {
+        left: 80px;
+    }
+}
+
+@media (max-width: 300px) {
+    .nothing span {
+        left: 40px;
+    }
+
+    .start span {
+        left: 40px;
+    }
+}

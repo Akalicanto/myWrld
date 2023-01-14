@@ -1,0 +1,42 @@
+<div class="fieldCont">
+    <div class="field"></div>
+    <div class="fieldCenter">
+
+        <div class="login" id="login">
+            <form [formGroup]="userForm" (ngSubmit)="iniciarSesion()">
+                <h2>Inicio de Sesión</h2>
+
+                <div>
+                    <input formControlName="email" type="mail" id="email" placeholder="Correo">
+                    <div class="text-danger"
+                        *ngIf="(userForm.get('email')?.invalid || userForm.get('email')?.hasError('required')) && userForm.get('email')?.touched">
+                        <span>El correo tener formato de <strong>Correo</strong></span>
+                    </div>
+                </div>
+
+
+                <div class="passwordiv">
+                    <input formControlName="password" [type]="changeType?'password':'text'" id="password"
+                        placeholder="Contraseña">
+                    <span class="eyeicon" id="eyeicon" (click)="viewPass()"><fa-icon class="icon"
+                            [icon]="faEye"></fa-icon></span>
+                    <div class="text-danger"
+                        *ngIf="userForm.get('password')?.hasError('required') && userForm.get('password')?.touched">
+                        <span>La contraseña es <strong>Obligatoria</strong></span>
+                    </div>
+                </div>
+
+
+                <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">Inicia
+                    Sesión!</button><br><br>
+
+            </form>
+
+            <div class="send">
+                <a routerLink="/register">¿No tienes cuenta? Creala aquí.</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="field"></div>
+</div>

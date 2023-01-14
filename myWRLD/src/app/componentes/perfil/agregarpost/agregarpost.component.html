@@ -1,0 +1,30 @@
+<div class="cont">
+    <div class="contText">
+        <div class="sectionContA">
+            <img src="{{profilePic}}" alt="profilePic" routerLink='/perfil/{{username}}'><br>
+        </div>
+        <form [formGroup]="postForm" (ngSubmit)="crearPublicacion()">
+            
+            <div class="sectionB">
+                <div>
+                    <span class="nombre">{{name}}</span>
+                    <span class="username">@{{username}}</span>
+                </div>
+                <div>
+                    <div>
+                        <textarea formControlName="msg" id="msgData" rows="4" maxlength="160"
+                            placeholder="¿Que hay de nuevo...?"></textarea>
+                        <div class="text-danger"
+                            *ngIf="postForm.get('msg')?.hasError('required') && postForm.get('msg')?.touched">
+                            <span>Debe escribir un <strong>Mensaje</strong> para publicarlo</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="sectionC">
+                <button type="submit" class="btn btn-primary" [disabled]="postForm.invalid">Publicar!</button>
+            </div>
+        </form>
+    <div>
+</div>

@@ -1,0 +1,106 @@
+<div class="editCont">
+    <div class="side"></div>
+    <div class="edit">
+        <app-buscador></app-buscador>
+        <form [formGroup]="dataForm" enctype="multipart/form-data" (ngSubmit)="guardarDatos()">
+        <img class="portadaImg" [src]="headerPic" alt="headerPic">
+        <div class="part-A">
+            <label for="imgFile">
+                <div class="editPortada">
+                    <fa-icon class="icon" [icon]="faEdit"></fa-icon>
+                </div>
+                <input  max-size="30000" class="file" id="imgFile" formControlName="profile" type="file" accept="image" (change)="getHeader($event)">
+            </label>
+        </div>
+        
+            <div class="format">
+                <div class="sectionA">
+                    <label for="imgProfile">
+                        <div class="editPerfil">
+                            <fa-icon class="icon" [icon]="faEdit"></fa-icon>
+                        </div>
+                        <input  max-size="100000" class="file" id="imgProfile" formControlName="profile" type="file" accept="image" (change)="getFile($event)">
+                        <img [src]="profilePic" alt="profilePic"><br>
+                    </label>
+                </div>
+                <div class="sectionB">
+                    <div>
+                        <input formControlName="name" id="nameData" type="text">
+                        <div class="redtext"
+                            *ngIf="dataForm.get('name')?.hasError('required') && dataForm.get('name')?.touched">
+                            <span>Debe escribir un <strong>Nombre</strong></span>
+                        </div><br>
+                        <span>@{{username}}</span>
+                    </div>
+                    <div class="descripcion">
+                        <textarea formControlName="desc" id="descData" rows="4" maxlength="160" value="{{desc}}"
+                            placeholder="Añada una descripción..."></textarea>
+                    </div>
+                </div>
+                <div class="sectionC">
+                    <button type="submit" [disabled]="dataForm.invalid" class="btn btn-success">Guardar</button>
+                </div>
+            </div>
+        </form>
+        <div class="formChange">
+            <div class="formA">
+                <h4>Cambiar nombre de Usuario</h4>
+                <div class="usernameForm">
+                    <form [formGroup]="usernameForm" (ngSubmit)="cambiarUsername()">
+
+                        <div>
+                            <span class="at">@</span><input type="text" id="oldUsername" value="{{username}}" readonly>
+                        </div>
+
+                        <div>
+                            <span class="at">@</span><input formControlName="newUsername" id="newUsername" placeholder="Nombre Usuario Nuevo">
+                            <div class="text-danger"
+                                *ngIf="usernameForm.get('newUsername')?.hasError('required') && usernameForm.get('newUsername')?.touched">
+                                <span>Debe escribir un <strong>nuevo</strong> nombre de usuario</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success" type="submit" [disabled]="usernameForm.invalid">Cambiar Nombre de
+                            Usuario</button><br><br>
+
+                    </form>
+                </div>
+            </div>
+            <div class="formB">
+                <h4>Cambio de Contraseña</h4>
+                <div class="passwordForm">
+                    <form [formGroup]="passwordForm" (ngSubmit)="cambiarPassword()">
+                        <div class="passwordiv">
+                            <input formControlName="newPassword" [type]="changeType?'password':'text'" id="newPassword"
+                                placeholder="Contraseña Nueva">
+                            <span class="eyeicon" id="eyeicon" (click)="viewPass()"><fa-icon class="icon"
+                                    [icon]="faEye"></fa-icon></span>
+                            <div class="text-danger"
+                                *ngIf="(passwordForm.get('newPassword')?.invalid || passwordForm.get('newPassword')?.hasError('required')) && passwordForm.get('newPassword')?.touched">
+                                <span>La contraseña debe contener al menos <strong> 8 caracteres, 1 mayúscula, 1 digito y 1 caracter especial (@$!%*#?&) </strong></span>
+                            </div>
+                        </div>
+
+                        <div class="passwordiv">
+                            <input formControlName="repeatNewPassword" [type]="repeatChangeType?'password':'text'"
+                                id="repeatNewPassword" placeholder="Repetir Contraseña">
+                            <span class="eyeicon" id="repeatEyeicon" (click)="repeatViewPass()"><fa-icon class="icon"
+                                    [icon]="RfaEye"></fa-icon></span>
+                            <div class="text-danger"
+                                *ngIf="passwordForm.get('repeatNewPassword')?.hasError('required') && passwordForm.get('repeatNewPassword')?.touched">
+                                <span>Repetir la contraseña Nueva es <strong>Obligatorio</strong></span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success" type="submit" [disabled]="passwordForm.invalid">Cambiar Contraseña!</button><br><br>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="btnDanger">
+            <button class="btn btn-danger" (click)="eliminarCuenta()">Eliminar Cuenta</button>
+        </div>
+    </div>
+    <div class="side"></div>
+</div>

@@ -1,0 +1,383 @@
+* {
+    z-index: 1;
+}
+
+.divSearch {
+    position: relative;
+}
+
+.fixedDiv {
+    position: fixed;
+}
+
+input {
+    position: absolute;
+    top: 245px;
+    right: 5px;
+    background-color: #eee0a8;
+    border: 1px solid black;
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    z-index: 1;
+}
+
+input:focus {
+    background-color: #f2e8c2;
+}
+
+.results {
+    display: none;
+    position: absolute;
+    top: 285px;
+    right: 5px;
+    width: 250px;
+    padding: 10px;
+    padding-bottom: 0;
+    overflow-y: auto;
+    max-height: 200px;
+    background-color: #f2e8c2;
+    border: 1px solid black;
+    z-index: 2;
+}
+
+.resultsCont {
+    color: black;
+    text-decoration: none;
+}
+
+.resultsCont:hover {
+    color: blue;
+}
+
+.divProfile {
+    position: fixed;
+}
+
+.profile {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #f2e8c2;
+    border: 1px solid black;
+    height: 100px;
+    width: 250px;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+
+.profile img {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-color: 1px solid black;
+    cursor: pointer;
+}
+
+.profileName {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 10vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profileUsername {
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    width: 10vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+}
+
+.profileUsername:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.profileFollow {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+}
+
+.profileFollow span {
+    margin-left: 15px;
+}
+
+.myProfile {
+    position: fixed;
+}
+
+.listMyProfile {
+    position: absolute;
+    top: 110px;
+    right: 5px;
+    background-color: #f2e8c2;
+    border: 1px solid black;
+    width: 250px;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+
+.listMyProfile h5 {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.listMyProfile h5:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.profileFollow span:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.cerrarSesion {
+    position: fixed;
+    bottom: 0;
+}
+
+.cerrarSesion div {
+    z-index: 1;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #f2e8c2;
+    border: 1px solid black;
+    width: 250px;
+    border-radius: 5px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.cerrarSesion h5 {
+    padding-top: 5px;
+    font-weight: bold;
+    color: red;
+}
+
+.Sprofile {
+    display: none;
+}
+
+.home {
+    display: none;
+}
+
+.session {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.slideSide { 
+    display: none;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .divSearch {
+        top: -46px;
+        float: right;
+    }
+
+    input {
+        top: 0;
+    }
+
+    .results {
+        top: 40px;
+    }
+
+    .divProfile {
+        display: none;
+    }
+
+    .myProfile {
+        display: none;
+    }
+
+    .cerrarSesion {
+        display: none;
+    }
+
+    .home {
+        display: block;
+        position: fixed;
+    }
+
+    .home div {
+        position: absolute;
+        top: 65px;
+        right: 5px;
+        width: 55px;
+        height: 55px;
+        background-color: #eee0a8;
+        border: 1px solid black;
+        border-radius: 5px;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .home .icon {
+        font-size: 2.1rem;
+        color: rgb(108, 108, 108);
+    }
+
+    .Sprofile {
+        display: block;
+        position: fixed;
+    }
+
+    .Sprofile div {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 55px;
+        height: 55px;
+        background-color: #eee0a8;
+        border: 1px solid black;
+        border-radius: 5px;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .Sprofile img {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        z-index: 1;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        border-color: 1px solid black;
+        cursor: pointer;
+    }
+
+    .session {
+        display: block;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .session div {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        width: 55px;
+        height: 55px;
+        background-color: #eee0a8;
+        border: 1px solid black;
+        border-radius: 5px;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .session .icon {
+        font-size: 2.1rem;
+        font-weight: bold;
+        color: red;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .slideSide {
+        position: fixed;
+        display: none;
+        background-color: #eee0a8;
+        border-right: 1px solid black;
+        width: 65px;
+        height: 100vh;
+        z-index: 1;
+    }
+
+    .home {
+        display: none;
+        z-index: 2;
+    }
+
+    .home div {
+        left: 5px;
+        border: none;
+    }
+
+    .Sprofile {
+        display: none;
+        z-index: 2;
+    }
+
+    .Sprofile div {
+        left: 5px;
+        border: none;
+    }
+
+    .session {
+        display: none;
+        z-index: 2;
+    }
+
+    .session div {
+        left: 5px;
+        border: none;
+    }
+
+    .menu {
+        display: block;
+        position: fixed;
+        top: 0;
+    }
+
+    .menu div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 15px;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 400px) {
+    input {
+        width: 175px;
+    }
+
+    .results {
+        width: 175px;
+    }
+
+    .results .icon {
+        display: none;
+    }
+}

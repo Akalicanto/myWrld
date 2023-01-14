@@ -1,0 +1,24 @@
+<div class="listCont">
+    <div class="side"></div>
+    <div id="list" class="list">
+        <app-buscador></app-buscador>
+        <div id="change" class="change">
+            <div routerLink="/followers/{{user}}">
+                <h2>Seguidores</h2>
+            </div>
+            <div routerLink="/following/{{user}}">
+                <h2>Seguidos</h2>
+            </div>
+        </div>
+        <ng-container *ngFor="let user of listUsers">
+            <div class="user">
+                <div routerLink='/perfil/{{user.username}}'>
+                    <h4>{{user.name}}</h4>
+                    <span class="username">@{{user.username}}</span>
+                    <span class="desc">{{user.desc}}</span>
+                </div>                
+            </div>
+        </ng-container>
+    </div>
+    <div class="side"></div>
+</div>

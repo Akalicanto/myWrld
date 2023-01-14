@@ -1,0 +1,109 @@
+.cont {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    background-color: #eee0a8;
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.contText {
+    display: flex;
+}
+
+/* sectionA */
+.sectionContA {
+    width: 20%;
+}
+
+.sectionContA img {
+    margin-top: 30px;
+    margin-left: 4vw;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-color: 1px solid black;
+    cursor: pointer;
+}
+
+form {
+    width: 100%;
+}
+
+/* sectionB */
+.sectionB {
+    width: 95%;
+    margin-top: 20px;
+}
+
+.nombre {
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+textarea {
+    margin-top: 5px;
+    height: 100px;
+    width: 90%;
+    resize: none;
+    background-color: #faf3d7;
+    padding: 0 15px;
+}
+
+/* sectionC */
+.sectionC {
+    margin-top: 20px;
+}
+
+button {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .sectionContA {
+        width: 30%;
+    }
+
+    .sectionB {
+        width: 94%;
+    }
+    
+    .date {
+        display: none;
+    }
+}
+
+@media (max-width: 300px) {    
+    .sectionContA {
+        width: 38%;
+    }
+
+    .sectionB {
+        width: 92%;
+    }
+
+    .username {
+        display: none;
+    }
+}

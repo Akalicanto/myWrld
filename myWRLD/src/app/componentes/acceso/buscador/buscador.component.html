@@ -1,0 +1,67 @@
+<div class="divSearch">
+    <div class="fixedDiv">
+        <input class="form-control" (click)="showCard()" id="search" type="search"
+            placeholder="Buscar en MyWrld" [(ngModel)]="word" (ngModelChange)="change('results')">
+
+        <div class="results card" id="results">
+            <a routerLink="/perfil/{{find.username}}" (click)="hideCard()" class="resultsCont"
+                *ngFor="let find of listUsers | search:word">
+                <p>
+                    <fa-icon [icon]="faSearch" class="icon"></fa-icon> @{{find.username}}
+                </p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="divProfile">
+    <div class="profile">
+        <img src="{{profilePic}}" alt="profilePic" routerLink='/perfil/{{username}}'><br>
+        <span class="profileName">{{name}}</span><br>
+        <span class="profileUsername" routerLink='/perfil/{{username}}'>@{{username}}</span>
+        <div class="profileFollow">
+            <span routerLink="/followers/{{username}}">{{followers.length}} seguidores</span>
+            <span routerLink="/following/{{username}}">{{following.length}} seguidos</span>
+        </div>
+    </div>
+</div>
+
+<div class="myProfile">
+    <div class="listMyProfile">
+        <h5 routerLink="/">Inicio</h5>
+        <h5 routerLink="/perfil/{{username}}">Mi Perfil</h5>
+        <h5 routerLink="/edit/{{username}}">Editar Mi Perfil</h5>
+    </div>
+</div>
+
+<div class="cerrarSesion">
+    <div>
+        <h5 (click)="cerrarSesion()">Cerrar Sesión</h5>
+    </div>
+</div>
+
+<div class="Sprofile" id="profileMini">
+    <div>
+        <img src="{{profilePic}}" alt="profilePic" routerLink='/perfil/{{username}}'>
+    </div>
+</div>
+
+<div class="home" id="homeMini">
+    <div>
+        <fa-icon [icon]="faHome" class="icon" routerLink="/"></fa-icon>
+    </div>
+</div>
+
+<div class="session" id="sessionMini">
+    <div>
+        <fa-icon (click)="cerrarSesion()" [icon]="faRightFromBracket" class="icon" routerLink="/"></fa-icon>
+    </div>
+</div>
+
+<div class="menu">
+    <div>
+        <fa-icon (click)="menu()" [icon]="faBars" class="icon"></fa-icon>
+    </div>
+</div>
+
+<div class="slideSide" [style.display]="open === true ? 'block' : 'none'"></div>

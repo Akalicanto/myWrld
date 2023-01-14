@@ -1,0 +1,51 @@
+<div class="fieldCont">
+    <div class="field"></div>
+    <div class="fieldCenter">
+
+        <div class="login" id="login">
+            <form [formGroup]="userForm" (ngSubmit)="crearUsuario()">
+                <h2>Registro</h2>
+
+                <div>
+                    <input formControlName="email" type="mail" id="email" placeholder="Correo">
+                    <div class="text-danger"
+                        *ngIf="(userForm.get('email')?.invalid || userForm.get('email')?.hasError('required')) && userForm.get('email')?.touched">
+                        <span>El correo tener formato de <strong>Correo</strong></span>
+                    </div>
+                </div>
+
+
+                <div>
+                    <input formControlName="username" type="text" id="username" placeholder="Usuario">
+                    <div class="text-danger"
+                        *ngIf="userForm.get('username')?.hasError('required') && userForm.get('username')?.touched">
+                        <span>El Nombre de Usuario es <strong>Obligatorio</strong></span>
+                    </div>
+                </div>
+
+
+                <div class="passwordiv">
+                    <input formControlName="password" [type]="changeType?'password':'text'" id="password"
+                        placeholder="Contraseña">
+                    <span class="eyeicon" id="eyeicon" (click)="viewPass()"><fa-icon class="icon"
+                            [icon]="faEye"></fa-icon></span>
+                    <div class="text-danger"
+                        *ngIf="(userForm.get('password')?.invalid || userForm.get('password')?.hasError('required')) && userForm.get('password')?.touched">
+                        <span>La contraseña debe contener al menos <strong> 8 caracteres, 1 mayúscula, 1 digito y 1
+                                caracter especial (@$!%*#?&) </strong></span>
+                    </div>
+                </div>
+
+
+                <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">regístrate!</button><br><br>
+
+            </form>
+
+            <div class="send">
+                <a routerLink="/login">¿Ya tienes cuenta? Inicia aquí.</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="field"></div>
+</div>
