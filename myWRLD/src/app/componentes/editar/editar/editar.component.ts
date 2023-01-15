@@ -74,7 +74,7 @@ export class EditarComponent implements OnInit {
         };
       });
     } else {
-      this.profilePic = "assets/profile.jpeg/";
+      this.profilePic = "assets/profile.jpeg";
     }
 
     if (this.cookieService.get("headerPic").includes("http:/")) {
@@ -87,7 +87,7 @@ export class EditarComponent implements OnInit {
         };
       });
     } else {
-      this.headerPic = "assets/header.jpg/"
+      this.headerPic = "assets/header.jpg"
     }
 
   }

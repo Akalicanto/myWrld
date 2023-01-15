@@ -23,7 +23,7 @@ export class PortadaComponent implements OnInit {
         };
       });
     } else {
-      this.imgPortada = "assets/header.jpg/"
+      this.imgPortada = "assets/header.jpg"
     }
   }
 
