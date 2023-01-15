@@ -44,7 +44,7 @@ export class ContenidoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.imgCont.includes("localhost")) {
+    if (this.imgCont.includes("http:/")) {
       this.http.get(this.imgCont, { responseType: 'blob' }).subscribe(res => {
         const reader = new FileReader();
         reader.readAsDataURL(res);

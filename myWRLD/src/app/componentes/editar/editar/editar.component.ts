@@ -64,7 +64,7 @@ export class EditarComponent implements OnInit {
       repeatNewPassword: ["", Validators.required],
     });
 
-    if (this.cookieService.get("profilePic").includes("localhost:")) {
+    if (this.cookieService.get("profilePic").includes("http:/")) {
       this.http.get(this.cookieService.get('profilePic'), { responseType: 'blob' }).subscribe(res => {
         const reader = new FileReader();
         reader.readAsDataURL(res);
@@ -77,7 +77,7 @@ export class EditarComponent implements OnInit {
       this.profilePic = "assets/profile.jpeg/";
     }
 
-    if (this.cookieService.get("headerPic").includes("localhost:")) {
+    if (this.cookieService.get("headerPic").includes("http:/")) {
       this.http.get(this.cookieService.get('headerPic'), { responseType: 'blob' }).subscribe(res => {
         const reader = new FileReader();
         reader.readAsDataURL(res);
