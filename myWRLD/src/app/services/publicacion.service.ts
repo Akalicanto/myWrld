@@ -8,7 +8,7 @@ import { Publicacion } from "../models/publicacion";
 })
 export class PublicacionService {
 
-  url = "http://localhost:4100/api/publicaciones/";
+  url = "http://35.181.90.121:4100/api/publicaciones/";
   
   constructor(private http: HttpClient) { }
 
