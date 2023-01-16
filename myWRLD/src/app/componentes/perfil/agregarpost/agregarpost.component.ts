@@ -26,7 +26,7 @@ export class AgregarpostComponent implements OnInit {
       msg: ["", Validators.required],
     });
 
-    if (this.cookieService.get('profilePic').includes("http:/")) {
+    if (this.cookieService.get('profilePic').includes("https:/")) {
       this.http.get(this.cookieService.get('profilePic'), { responseType: 'blob' }).subscribe(res => {
         const reader = new FileReader();
         reader.readAsDataURL(res);

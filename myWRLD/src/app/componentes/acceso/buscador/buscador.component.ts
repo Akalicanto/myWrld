@@ -29,7 +29,7 @@ export class BuscadorComponent implements OnInit {
   followers: any;
 
   constructor(private _usuarioService: UsuarioService, private cookieService: CookieService, private router: Router, private toastr: ToastrService, private http: HttpClient) {
-    if (this.cookieService.get('profilePic').includes("http:/")) {
+    if (this.cookieService.get('profilePic').includes("https:/")) {
       this.http.get(this.cookieService.get('profilePic'), { responseType: 'blob' }).subscribe(res => {
         const reader = new FileReader();
         reader.readAsDataURL(res);
