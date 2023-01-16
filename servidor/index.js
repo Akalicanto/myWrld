@@ -22,7 +22,7 @@ app.listen(4000, () => {
 })
 
 var privateKey = fs.readFileSync( '/opt/bitnami/apache2/conf/ssl/privkey.pem' );
-var certificate = fs.readFileSync( '/opt/bitnami/apache2/conf/ssl/fullchain.pem' );
+var certificate = fs.readFileSync( '/opt/bitnami/apache2/conf/ssl/cert.pem' );
 
 https.createServer({
     key: privateKey,
