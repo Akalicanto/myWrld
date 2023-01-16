@@ -21,8 +21,8 @@ app.listen(4000, () => {
     console.log("servidor USER ON");
 })
 
-var privateKey = fs.readFileSync( '/opt/bitnami/apache2/conf/ssl/privKey.pem' );
-var certificate = fs.readFileSync( '/opt/bitnami/apache2/conf/ssl/cert.pem' );
+var privateKey = fs.readFileSync( '/opt/bitnami/apache2/conf/ssl/privkey.pem' );
+var certificate = fs.readFileSync( '/opt/bitnami/apache2/conf/ssl/fullchain.pem' );
 
 https.createServer({
     key: privateKey,
