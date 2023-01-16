@@ -52,7 +52,7 @@ export class PrincipalComponent implements OnInit {
               this._publicacionService.getAllPost(id).subscribe(data => {
                 data.forEach((msg: any) => {
                   if (user.profilePath != "" && user.profilePath != undefined) {
-                    msg.profilePath = "http://35.181.90.121:4000/" + user.profilePath;
+                    msg.profilePath = "https://35.181.90.121:4000/" + user.profilePath;
                   }  else {
                     msg.profilePath = "/assets/profile.jpeg";
                   }

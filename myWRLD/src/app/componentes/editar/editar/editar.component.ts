@@ -316,11 +316,11 @@ export class EditarComponent implements OnInit {
         this.cookieService.set('Desc', data.desc);
 
         if (data.profilePath != undefined) {
-          this.cookieService.set('profilePic', "http://35.181.90.121:4000/" + data.profilePath);
+          this.cookieService.set('profilePic', "https://35.181.90.121:4000/" + data.profilePath);
         }
 
         if (data.headerPath != undefined) {
-          this.cookieService.set('headerPic', "http://35.181.90.121:4000/" + data.headerPath);
+          this.cookieService.set('headerPic', "https://35.181.90.121:4000/" + data.headerPath);
         }
 
         this.toastr.success("Datos guardados Correctamente", "Correcto");

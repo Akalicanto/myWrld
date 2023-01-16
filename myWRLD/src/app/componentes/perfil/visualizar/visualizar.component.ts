@@ -62,7 +62,7 @@ export class VisualizarComponent implements OnInit {
         }) => {
           if (user._id == myUSER.idUser) {
             if (user.profilePath != "" && user.profilePath != undefined) {
-              myUSER.profilePath = "http://35.181.90.121:4000/" + user.profilePath;
+              myUSER.profilePath = "https://35.181.90.121:4000/" + user.profilePath;
             } else {
               myUSER.profilePath = "/assets/profile.jpeg";
             }

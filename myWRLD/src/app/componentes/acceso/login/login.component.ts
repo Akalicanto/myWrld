@@ -48,13 +48,13 @@ export class LoginComponent implements OnInit {
         this.cookieService.set('Followers', data.followers);
 
         if (data.profilePath != undefined && data.profilePath != "") {
-          this.cookieService.set('profilePic', "http://35.181.90.121:4000/" + data.profilePath);
+          this.cookieService.set('profilePic', "https://35.181.90.121:4000/" + data.profilePath);
         } else {
           this.cookieService.set('profilePic', "/assets/profile.jpeg");
         }
 
         if (data.headerPath != undefined && data.headerPath != "") {
-          this.cookieService.set('headerPic', "http://35.181.90.121:4000/" + data.headerPath);
+          this.cookieService.set('headerPic', "https://35.181.90.121:4000/" + data.headerPath);
         } else {
           this.cookieService.set('headerPic', "/assets/header.jpeg");
         }
