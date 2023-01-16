@@ -8,7 +8,7 @@ import { Usuario } from "../models/usuario";
 })
 export class UsuarioService {
 
-  url = "https://35.181.90.121:4000/api/usuarios/";
+  url = "https://www.mywrld.click:4000/api/usuarios/";
 
   constructor(private http: HttpClient) { }
 
