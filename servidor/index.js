@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use("/api/usuarios", require("./routes/usuario"));
 
-app.listen(4000, () => {
+app.listen(4001, () => {
     console.log("servidor USER ON");
 })
 
@@ -27,7 +27,7 @@ var certificate = fs.readFileSync( '/opt/bitnami/apache2/conf/ssl/fullchain.pem'
 https.createServer({
     key: privateKey,
     cert: certificate
-}, app).listen(4001);
+}, app).listen(4000);
 
 app.use('/uploads', express.static('uploads'));
 
