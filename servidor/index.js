@@ -1,7 +1,9 @@
 const express = require("express");
 const conectarDB = require("./config/db");
 const cors = require("cors");
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
+const https = require("https");
+const fs = require('fs');
 
 //creamos el servidor
 const app = express();
