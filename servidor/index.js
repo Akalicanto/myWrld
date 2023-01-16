@@ -19,6 +19,14 @@ app.listen(4000, () => {
     console.log("servidor USER ON");
 })
 
+var privateKey = fs.readFileSync( '/opt/bitnami/apache2/conf/ssl/privKey.pem' );
+var certificate = fs.readFileSync( '/opt/bitnami/apache2/conf/ssl/fullchain.pem' );
+
+https.createServer({
+    key: privateKey,
+    cert: certificate
+}, app).listen(4001);
+
 app.use('/uploads', express.static('uploads'));
 
 app.use(express.urlencoded({extended:false}));
