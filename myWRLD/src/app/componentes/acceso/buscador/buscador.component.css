@@ -103,6 +103,7 @@ input:focus {
     text-overflow: ellipsis;
     display: block;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .profileUsername:hover {
@@ -142,11 +143,16 @@ input:focus {
 .listMyProfile h5 {
     padding: 5px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .listMyProfile h5:hover {
     font-weight: bold;
     text-decoration: underline;
+}
+
+.profileFollow span {
+    cursor: pointer;
 }
 
 .profileFollow span:hover {
@@ -155,6 +161,7 @@ input:focus {
 }
 
 .cerrarSesion {
+    cursor: pointer;
     position: fixed;
     bottom: 0;
 }

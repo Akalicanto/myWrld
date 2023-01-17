@@ -13,6 +13,7 @@ export class PortadaComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+
     if (this.imgPortada.includes("https:/")) {
       this.http.get(this.imgPortada, { responseType: 'blob' }).subscribe(res => {
         const reader = new FileReader();

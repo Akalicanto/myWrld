@@ -54,14 +54,14 @@ export class BuscadorComponent implements OnInit {
       data.forEach((user: { username: string; followers: any; following: any; }) => {
         if (user.username == this.username) {
           if (user.followers != "") {
-            this.followers = user.followers.toString().split(",");
+            this.followers = user.followers.toString().split(",").length;
           } else {
-            this.followers = "";
+            this.followers = 0;
           }
           if (user.following != "") {
-            this.following = user.following.toString().split(",");
+            this.following = user.following.toString().split(",").length;
           } else {
-            this.following = "";
+            this.following = 0;
           }     
         }
       });
