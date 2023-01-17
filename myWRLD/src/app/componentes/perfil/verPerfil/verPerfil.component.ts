@@ -96,13 +96,13 @@ export class VerPerfilComponent implements OnInit {
           this.following = user.following;
           this.followers = user.followers;
           if (user.profilePath != "" && user.profilePath != undefined) {
-            this.profilePic = "https://35.181.90.121:4000/" + user.profilePath;
+            this.profilePic = "https://www.mywrld.click:4000/" + user.profilePath;
           } else {
             this.profilePic = "/assets/profile.jpeg";
           }
 
           if (user.headerPath != "" && user.headerPath != undefined) {
-            this.headerPic = "https://35.181.90.121:4000/" + user.headerPath;
+            this.headerPic = "https://www.mywrld.click:4000/" + user.headerPath;
           } else {
             this.headerPic = "/assets/header.jpg";
           }
